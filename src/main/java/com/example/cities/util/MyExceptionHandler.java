@@ -23,7 +23,7 @@ public class MyExceptionHandler extends ResponseEntityExceptionHandler {
     @Override
     protected ResponseEntity<Object> handleHttpMessageNotReadable
             (HttpMessageNotReadableException ex, HttpHeaders headers, HttpStatus status, WebRequest request) {
-        Response response = new Response("Не правильный JSON", ex.getMessage());
+        Response response = new Response("Неправильный JSON", ex.getMessage());
         return new ResponseEntity<>(response, status);
     }
 }
